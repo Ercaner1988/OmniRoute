@@ -61,6 +61,16 @@
   "engines": {
     "node": ">=22.22.2 <23 || >=24.0.0 <27"
   },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@playwright/browser-chromium",
+    "@swc/core",
+    "koffi",
+    "onnxruntime-node",
+    "protobufjs",
+    "tls-client-node",
+    "unrs-resolver"
+  ],
   "keywords": [
     "ai",
     "router",
@@ -105,6 +115,7 @@
     "build:release": "rm -rf .build dist && OMNIROUTE_BUILD_SHA=$(git rev-parse --short HEAD) npm run build && npm run build:cli && node scripts/build/write-build-sha.mjs",
     "build:native:tproxy": "cd src/mitm/tproxy/native && npx --yes node-gyp rebuild",
     "start": "node scripts/dev/run-next.mjs start",
+    "start:bun": "bun scripts/dev/run-next.mjs start",
     "homolog": "node scripts/homolog/run.mjs",
     "lint": "eslint . --cache --cache-location .eslintcache --suppressions-location config/quality/eslint-suppressions.json",
     "lint:json": "node scripts/quality/run-eslint-json.mjs",
