@@ -293,3 +293,6 @@ docker-compose.yml.bak
 # Ad-hoc test sandboxes (never tracked — may contain local DBs)
 /.sandbox/
 .aider*
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
