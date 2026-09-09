@@ -304,3 +304,6 @@ docker-compose.yml.bak
 
 # Scoped tsc incremental state written by the typecheck gates (typecheck:core / open-sse / api)
 .tsbuildinfo-*
+
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/graft/
