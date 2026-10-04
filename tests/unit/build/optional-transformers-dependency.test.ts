@@ -34,7 +34,7 @@ test("ONNX chain (@huggingface/transformers + onnxruntime-node) stays optional s
   );
   assert.equal(
     pkg.optionalDependencies?.["@huggingface/transformers"],
-    "^4.2.0",
+    "4.2.0",
     "transformers must be an optionalDependency"
   );
   assert.equal(
@@ -63,12 +63,12 @@ test("lockfile marks the whole ONNX chain optional", () => {
         dependencies?: Record<string, string>;
         optionalDependencies?: Record<string, string>;
       }
-      >;
+    >;
   }>("package-lock.json");
 
   assert.equal(
     lock.packages[""]?.optionalDependencies?.["@huggingface/transformers"],
-    "^4.2.0",
+    "4.2.0",
     "root lock optionalDependencies must hold transformers"
   );
   assert.equal(
