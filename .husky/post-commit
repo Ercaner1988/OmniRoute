@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# Paslı Beyin köprüsü: core.hooksPath = .husky/_ olduğundan .githooks/ doğrudan
+# çalışmaz; husky bu dosyayı post-commit'te koşar. Kanca bloklamaz, her koşulda 0 döner.
+[ -f .githooks/post-commit ] && sh .githooks/post-commit
+exit 0
